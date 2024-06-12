@@ -3,9 +3,9 @@ import React from 'react';
 import Banner from './components/Banner';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import About from './components/About';
-import Services from './components/Services';
-import Work from './components/Work';
+import Technologies from './components/Technologies';
+import Education from './components/Education';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 const App = () => {
@@ -14,11 +14,12 @@ const App = () => {
       <Header />
       <Banner />
       <Nav />
-      <About />
-      <Services />
-      <Work />
+      <Technologies />
+      <Projects/>
+      <Education />
+     
       <Contact />
-      {/* <div className='h-[4000px]'></div> */}
+       <div className='h-[250px]'></div> 
     </div>
   );
 };
