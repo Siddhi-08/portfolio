@@ -4,7 +4,6 @@ import Image from "../assets/profile.png";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { useState } from "react";
 
 const Banner = () => {
   return (
@@ -13,14 +12,14 @@ const Banner = () => {
       id="home"
     >
       <div className='"container mx-auto'>
-        <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12 ">
-          <div className="flex-1 text-center font-secondary lg:text-left -mb-40 lg:mb-4">
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-12 mt-10 ">
+          <div className="flex-1 text-center font-secondary lg:text-left  lg:mb-4">
             <motion.h1
               variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className=" sm:-mt-10 text-[55px] font-bold leading-[0.8] lg:text-[80px] mb-6"
+              className=" sm:-mt-10 text-[55px] font-bold leading-[0.8] lg:text-[60px] mb-6"
             >
               Hello I'm Siddhi <span>Jha</span>
             </motion.h1>
@@ -32,7 +31,7 @@ const Banner = () => {
               className="mb-6 text-[36px] lg:text-[40px]  font-secondary
         font-semibold uppercase leading-[1]"
             >
-              <span className=" text-white mr-4">I am a</span>
+              <span className=" text-white mr-4 mt-4">I am a</span>
               <TypeAnimation
                 sequence={[
                   "Developer",
@@ -58,10 +57,14 @@ const Banner = () => {
               </a>
             </motion.div>
           </div>
-          <motion.div variants={fadeIn('down',0.5)} initial="hidden" whileInView={'show'}  className="lg:mb-20 hidden lg:flex flex-1 max-w-[300px] lg:max-w-[482px] ">
+          <motion.div variants={fadeIn('down',0.5)} initial="hidden" whileInView={'show'}
+              className="hidden lg:flex flex-1 max-w-[200px] lg:max-w-[482px] lg:ml-10 lg:mt-[-55px]"
+              >
             <img
               style={{
-                height: "700px",
+                height: "400px",
+                borderRadius: "50%",
+                marginBottom:'140px'
                 
               }}
               src={Image}
@@ -74,3 +77,6 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+// className="lg:mb-20 hidden lg:flex flex-1 max-w-[300px] lg:max-w-[482px] ml-8 "

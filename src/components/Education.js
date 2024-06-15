@@ -35,7 +35,7 @@ const Education = () => {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }} className="flex-1  lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0">
             
-            <h2 className="h2 text-accent mb-10">Education</h2>
+            <h2 className="h2 text-accent mb-10 mt-10">Education</h2>
             <img className="lg:mb-20 hidden lg:flex flex-1 max-w-[300px] lg:max-w-[482px]" src={services} style={{height:'250px'}}/>
           </motion.div>
        <motion.div  variants={fadeIn("left", 0.4)}
@@ -46,7 +46,8 @@ const Education = () => {
           {education.map((edu,index)=>{
             const{Name,Year,City,Grade}=edu
              return(
-              <div className="border-b border-white/20 h-[146px] mb-[38px] " key={index}>
+              // <div className="border-b border-white/20 h-[146px] mb-[38px] " key={index}>
+              <div className=" h-[146px] mb-[38px] " key={index}>
                 <div className="max-w-[476px]">
                   <h3 className="text-[20px] tracking-wider font-primary font-semibold mb-6 mt-10">
                     {Name}

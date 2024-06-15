@@ -10,6 +10,8 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
+import {useMediaQuery} from 'react-responsive';
+
 const Technologies = () => {
   const skills = [
     { icon: <RiReactjsLine className="text-7xl text-cyan-400" />, name: 'React' },
@@ -26,6 +28,9 @@ const Technologies = () => {
     { icon: <SiMui className="text-7xl text-blue-400" />, name: 'Material UI' },
   ];
 
+  const isSmallScreen = useMediaQuery({ maxWidth: 914 });
+
+
   const chunkSkills = (skills, size) => {
     const result = [];
     for (let i = 0; i < skills.length; i += size) {
@@ -34,21 +39,22 @@ const Technologies = () => {
     return result;
   };
 
-  const skillChunks = chunkSkills(skills, 3);
+  const skillChunks = chunkSkills(skills, isSmallScreen ? 2 : 3);
 
   return (
     <section className='section' id='skills'>
       <div className='container mx-auto '>
     
     <motion.div  variants={fadeIn("up", 0.3)}
-    initial="hidden"
+     initial="hidden"
     whileInView={"show"}
-    viewport={{ once: false, amount: 0.5 }}  className="container border-b border-neutral-800 pb-24 mt-30 mx-auto">
+    viewport={{ once: false, amount: 0.3}}  className="container border-b border-neutral-800 pb-24 mt-30 mx-auto">
       <motion.h1
   variants={fadeIn("up", 0.3)}
   initial="hidden"
   whileInView={"show"}
-  viewport={{ once: false, amount: 0.5 }}
+  
+  viewport={{ once: false, amount:0.3 }}
   className="h2 text-accent  text-center mb-20 h-20"
 >
    Skills
